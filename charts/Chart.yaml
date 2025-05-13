@@ -1,0 +1,6 @@
+apiVersion: v2
+name: go-example-service
+description: A Helm chart for Go Example Service with Jaeger instrumentation
+type: application
+version: 0.1.0
+appVersion: "1.0.0" 

@@ -1,0 +1,24 @@
+replicaCount: 1
+
+image:
+  repository: nataliagranato/jaeger-go-instrumentation
+  tag: 0.1.1
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 8080
+
+env:
+  - name: PORT
+    value: "8080"
+  - name: JAEGER_ENDPOINT
+    value: "http://jaeger-collector.jaeger.svc.cluster.local:14268/api/traces"
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 50m
+    memory: 64Mi 
