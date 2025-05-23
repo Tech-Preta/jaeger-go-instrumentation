@@ -55,7 +55,7 @@ docker build -t nataliagranato/jaeger-go-instrumentation:0.1.1 .
 2. Execute o container:
 ```bash
 # Para execução local (fora do cluster Kubernetes)
-docker run -p 8080:8080 -e JAEGER_ENDPOINT="https://jaeger-http-collector.csre-plat-preprod.1.yel.se1.br.jaxyendy.com/api/traces" nataliagranato/jaeger-go-instrumentation:0.1.1
+docker run -p 8080:8080 -e JAEGER_ENDPOINT="https://jaeger-http-collector.nataliagranato.xyz/api/traces" nataliagranato/jaeger-go-instrumentation:0.1.1
 ```
 
 ## Deploy com Helm
@@ -87,7 +87,7 @@ Onde:
 Quando a aplicação está rodando localmente (fora do cluster), usamos o endpoint do ingress do Jaeger:
 
 ```bash
-JAEGER_ENDPOINT="https://jaeger-http-collector.csre-plat-preprod.1.yel.se1.br.jaxyendy.com/api/traces"
+JAEGER_ENDPOINT="https://jaeger-http-collector.nataliagranato.xyz/api/traces"
 ```
 
 ## Testando
