@@ -4,3 +4,18 @@ updates:
     directory: /
     schedule:
       interval: daily
+
+  - package-ecosystem: docker
+    directory: /
+    schedule:
+      interval: daily
+
+  - package-ecosystem: gomod
+    directory: /src
+    schedule:
+      interval: daily
+
+  - package-ecosystem: pre-commit
+    directory: /
+    schedule:
+      interval: daily      
