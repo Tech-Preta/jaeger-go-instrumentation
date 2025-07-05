@@ -1,6 +1,17 @@
 version: 2
 updates:
-- package-ecosystem: "github-actions" # Para GitHub Actions
-  directory: "/" # Localização do workflow YAML
-  schedule:
-    interval: "daily"
+  - package-ecosystem: "gomod"
+    directory: "/src" 
+    schedule:
+      interval: "weekly" 
+      day: "monday"      
+      time: "08:00"     
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    open-pull-requests-limit: 5
+    rebase-strategy: "auto"
+    labels:
+      - "dependencies"
+    assignees:
+      - "nataliagranato" 
