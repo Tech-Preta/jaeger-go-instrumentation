@@ -1,6 +1,6 @@
 module go-example-service
 
-go 1.26.0
+go 1.26.11
 
 require (
 	github.com/gorilla/mux v1.8.1
